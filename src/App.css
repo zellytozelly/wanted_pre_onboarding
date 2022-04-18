@@ -1,0 +1,32 @@
+
+:root {
+    /*========== Colors ==========*/
+    --first: #266bff;
+    --second: #588DFF;
+    --black: #161212;
+    --black-second: #262624;
+    --white: #ffffff;
+    --white-second: #f7f7f7;
+    --grey: #5B5757;
+    --grey-light: #C1C1C1;
+    --grey-lighter: #959595;
+    --shadow: #C8C8C8;
+    --grey-background: #EBEBEB;
+    --purple: #9A30AE;
+    --blue-light: #588DFF;
+    
+    /*========== Font Weights ==========*/
+    --bold: 700;
+    --bold-900: 900;
+    /*========== Font Size ==========*/
+    --small: .813rem;
+  }
+  * {
+    box-sizing:border-box;
+  }
+  input {
+    all: unset;
+  }
+  body {
+    font-size:var(--normal);
+  }
