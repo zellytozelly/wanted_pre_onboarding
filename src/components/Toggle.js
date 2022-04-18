@@ -43,6 +43,7 @@ const CheckBox = styled.input`
   background: ${(props) => props.leftBgColor ?? 'var(--grey-background)'};
   border-radius: 2em;
   color: var(--grey-lighter);
+  cursor: pointer;
   
   /* 선택X 텍스트 */
   ::before {
