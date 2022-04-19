@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from 'styled-components';
 
 export default function Toggle({
@@ -29,6 +29,7 @@ export default function Toggle({
   }
 // checkbox wrapper
 const Wrapper = styled.div`
+  margin-top: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -36,7 +37,6 @@ const Wrapper = styled.div`
 `;
 
 const CheckBox = styled.input`
-
   width: 10rem;
   height: 2rem;
   background: var(--second);
