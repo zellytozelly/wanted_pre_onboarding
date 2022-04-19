@@ -2,35 +2,26 @@ import React,  { useState } from "react";
 import styled from 'styled-components';
 import '../App.css';
 
-export default function Toggle(){
+export default function Tab(){
   const [activeIndex, setActiveIndex] = useState(0);
   const tabClickHandler=(index)=>{
     setActiveIndex(index)
   }
   const tabContArr=[
     {
-        tabTitle:(
-          <li className={activeIndex===0 ? "is-active" : ""} onClick={()=>tabClickHandler(0)}> 감자 </li>
-        ),
-        tabCont:(
-            <div> 🥔Potato </div>
-        )
+      index: 0,
+      tabTitle: "감자",
+      tabCont:"🥔Potato"
     },
     {
-        tabTitle:(
-          <li className={activeIndex===1 ? "is-active" : ""} onClick={()=>tabClickHandler(1)}> 고구마 </li>
-        ),
-        tabCont:(
-            <div> 🍠Sweet Potato </div>
-        )
+      index: 1,
+      tabTitle: "고구마",
+      tabCont:"🍠Sweet Potato"
     },
     {
-        tabTitle:(
-          <li className={activeIndex===2 ? "is-active" : ""} onClick={()=>tabClickHandler(2)}> 카레라이스 </li>
-        ),
-        tabCont:(
-            <div> 🍛Curried Rice </div>
-        )
+      index: 2,
+      tabTitle: "카레라이스",
+      tabCont:"🍛Curried Rice"
     }
   ];
 
@@ -39,7 +30,14 @@ export default function Toggle(){
       <TabSetting>
         <TabList>
           {tabContArr.map((section, index)=>{
-            return <TabItem>{section.tabTitle}</TabItem>
+            return(
+              <TabItem
+                isActive={index === activeIndex} 
+                onClick={()=>tabClickHandler(index)}
+              >
+                {section.tabTitle}
+              </TabItem>
+            )
           })}
           <ClickSlideWrapper>
             <ClickSlide activeIndex={activeIndex}></ClickSlide>
@@ -52,10 +50,7 @@ export default function Toggle(){
       </TabSetting>
     </div>
   );
-
 }
-
-
 
 const TabSetting = styled.div`
   text-align: center;
@@ -80,15 +75,12 @@ const TabItem = styled.p`
   flex: 1;
   padding: 12px 0 0 0;
   text-align: center;
-  color: var(--grey-lighter);
   cursor: pointer;
   transition: opacity 180ms ease-out;
   outline: 0;
-
-  &:hover,
-  &.tab-is-active {
-    color: var(--black);
-  }
+  font-weight: var(--bold-900);
+  color: ${(props) => (props.isActive ? "var(--black)" : "var(--grey-lighter)")};
+  &:hover{color: var(--black);}
 `;
 
 const ClickSlideWrapper = styled.div`
@@ -106,6 +98,7 @@ const ClickSlide = styled.div`
   bottom: 0;
   height: 2px;
   background-color: var(--green-mint);
-  transition: activeIndex*33 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  left: ${(props) => props.activeIndex * 33}% ;
+  transition: 800ms cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 2;
 `;
