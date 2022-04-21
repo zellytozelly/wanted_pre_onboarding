@@ -55,7 +55,7 @@ export default function Tab(){
 const TabSetting = styled.div`
   text-align: center;
   padding: 0 40px 40px 40px;
-  margin: 40px 30% 30% 30%;
+  margin: 40px 30% 40px 30%;
   border: 1px solid #a5acb1;
   border-radius: 5px;
   background: #fff;
@@ -80,7 +80,7 @@ const TabItem = styled.p`
   outline: 0;
   font-weight: var(--bold-900);
   color: ${(props) => (props.isActive ? "var(--black)" : "var(--grey-lighter)")};
-  &:hover{color: var(--black);}
+ 
 `;
 
 const ClickSlideWrapper = styled.div`
