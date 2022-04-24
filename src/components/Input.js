@@ -9,10 +9,11 @@ export default function Input(){
     const [pwd, setPwd] = useState('');
     const [isRevealPwd, setIsRevealPwd] = useState(false);
     const [isEmail, setIsEmail] = useState(false);
+    const [isEmpty, setIsEmpty] = useState(true);
     const checkEmail = (e) => {
         var emailRegExp = /^[\w-]+(\.[\w-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$/;
         if (emailRegExp.test(e.target.value)) setIsEmail(true); else setIsEmail(false);
-        if (e.target.value == '') console.log("아");
+        if (!e.target.value) setIsEmpty(true); else setIsEmpty(false);
     }
 
     return (
@@ -28,7 +29,7 @@ export default function Input(){
                     onChange={checkEmail}
                 />
                 <CheckToggle isEmail={isEmail}><CheckIcon/></CheckToggle>
-                <EmailValidText isEmail={isEmail}>Invalid e-mail address.</EmailValidText>
+                <EmailValidText isEmail={isEmail} isEmpty={isEmpty}>Invalid e-mail address.</EmailValidText>
                 
             </EmailBox>
             
@@ -87,8 +88,7 @@ const EmailValidText = styled.div`
     font-size: 0.7em;
     color: var(--red);
     margin-left: 5px;
-    content: 'Invalid e-mail address.';
-    visibility:  ${(props)=>(props.isEmail) ? 'hidden' : 'visible'};
+    visibility:  ${(props)=>(props.isEmail || props.isEmpty) ? 'hidden' : 'visible'};
 `
 const CheckToggle = styled.div`
     margin: 5px;
