@@ -17,7 +17,7 @@ https://five-components.netlify.app/
 ---
 ### Toggle2
 
-<img width='50%' src='https://user-images.githubusercontent.com/51311690/165369839-e5a2478f-bb78-4e46-a902-6a1492133e2f.gif' />
+<img width='40%' src='https://user-images.githubusercontent.com/51311690/165369839-e5a2478f-bb78-4e46-a902-6a1492133e2f.gif' />
 
 - 기능
     - 핵심요소 : 버튼을 누를 때 마다 선택된 항목이 변한다.
@@ -28,7 +28,7 @@ https://five-components.netlify.app/
     - Toggle2(첫번째)와 달리 Toggle(두번째)는 활성화 되어있는 부분만 텍스트가 나타나도록 제작해보았습니다.
 
 ### Tab
-<img width='50%' src='https://user-images.githubusercontent.com/51311690/165369844-092e37d7-dc06-4419-9274-dd8ce8fc3418.gif'/>
+<img width='60%' src='https://user-images.githubusercontent.com/51311690/165369844-092e37d7-dc06-4419-9274-dd8ce8fc3418.gif'/>
 
 - 기능
     - 핵심요소 : 버튼을 누를 때 마다 선택된 탭이 변한다.
@@ -39,7 +39,7 @@ https://five-components.netlify.app/
     - 슬라이드는 `activeIndex` 값에 일정 값을 곱하여 `left`로 위치시켰습니다.
 
 ### Slider
-<img width='50%' src='https://user-images.githubusercontent.com/51311690/165369845-4ecd7ac8-b4b6-4341-83bb-e6c1e18d4eee.gif'/>
+<img width='60%' src='https://user-images.githubusercontent.com/51311690/165369845-4ecd7ac8-b4b6-4341-83bb-e6c1e18d4eee.gif'/>
 
 - 기능
     - 핵심요소 : 슬라이더를 움직이면 상단의 값이 자동으로 변한다.
@@ -50,7 +50,7 @@ https://five-components.netlify.app/
     - `input`의 `value`로 현재 클릭한 위치를 받아와, 동그라미 위치(`left`) / 바(`linear-gradient`) / 퍼센트 바로가기 버튼을 제작하였습니다.
 
 ### Input
-<img width='50%' src='https://user-images.githubusercontent.com/51311690/165369847-b765d88a-8d8c-4d9d-973e-b968bb38d231.gif'/>
+<img width='60%' src='https://user-images.githubusercontent.com/51311690/165369847-b765d88a-8d8c-4d9d-973e-b968bb38d231.gif'/>
 
 - 기능
     - 핵심요소 : 인풋창에 이메일과 비밀번호 입력이 가능하다
