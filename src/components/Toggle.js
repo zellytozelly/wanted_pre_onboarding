@@ -21,7 +21,7 @@ export default function Toggle({
           leftBgColor={leftBgColor}
           rightBgColor={rightBgColor}
           circleColor={circleColor}
-          onChange={() => setChecked()}
+          onChange={() => setChecked}
           type="checkbox"
         />
       </Wrapper>
@@ -39,7 +39,6 @@ const Wrapper = styled.div`
 const CheckBox = styled.input`
   width: 10rem;
   height: 2rem;
-  background: var(--second);
   background: ${(props) => props.leftBgColor ?? 'var(--grey-background)'};
   border-radius: 2em;
   color: var(--grey-lighter);
