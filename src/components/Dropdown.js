@@ -30,6 +30,7 @@ export default function Dropdown(){
                 <SelectWrapper>
                     <IconPosition><SearchIcon/></IconPosition>
                     <SelectInput
+                        type="text"
                         placeholder="Search Symbol"
                         onChange={(e)=>{
                             setSearchItem(e.target.value);

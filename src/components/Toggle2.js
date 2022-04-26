@@ -20,7 +20,7 @@ export default function Toggle2(){
 }
 
 const ToggleWrapper = styled.div`
-    margin: 0 30% 40px 32%;
+    margin: 40px 45% 40px 45%;
     padding: 10px;
     background: var(--grey-background);
     border-radius: 2em;

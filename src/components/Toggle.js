@@ -1,27 +1,10 @@
 import React from "react";
 import styled from 'styled-components';
 
-export default function Toggle({
-    left,
-    right,
-    leftColor,
-    rightColor,
-    leftBgColor,
-    rightBgColor,
-    circleColor,
-    setChecked,
-  }) {
+export default function Toggle() {
     return (
       <Wrapper>
         <CheckBox
-          left={left}
-          right={right}
-          leftColor={leftColor}
-          rightColor={rightColor}
-          leftBgColor={leftBgColor}
-          rightBgColor={rightBgColor}
-          circleColor={circleColor}
-          onChange={() => setChecked}
           type="checkbox"
         />
       </Wrapper>
@@ -39,7 +22,7 @@ const Wrapper = styled.div`
 const CheckBox = styled.input`
   width: 10rem;
   height: 2rem;
-  background: ${(props) => props.leftBgColor ?? 'var(--grey-background)'};
+  background: var(--grey-background);
   border-radius: 2em;
   color: var(--grey-lighter);
   cursor: pointer;
@@ -48,14 +31,14 @@ const CheckBox = styled.input`
   ::before {
     z-index: 1;
     position: absolute;
-    content: '${(props) => props.left ?? '기본'}';
+    content: '기본';
     width: 5rem;
     height: 2rem;
     display: flex;
     padding: 0 0 0 2.3em;
     justify-content: flex-start;
     align-items: center;
-    color: ${(props) => props.leftColor ?? 'var(--grey)'};
+    color: var(--grey);
     font-weight: var(--bold-900);
     font-size: var(--small);
 
@@ -71,12 +54,12 @@ const CheckBox = styled.input`
     top: calc((2rem - 1.6em) / 2);
     left: calc((2rem - 1.6em) / 2);
     border-radius: 2em;
-    background: ${(props) => props.circleColor ?? 'var(--white)'};
+    background: var(--white);
     /* 원 이동 트랜지션 */
     transition: all 0.2s ease-in-out;
   }
   &:checked {
-    background: ${(props) => props.rightBgColor ?? 'var(--grey-background)'};
+    background: var(--grey-background);
     /* 배경색 변경 트랜지션 */
     transition: all 0.2s ease-in-out;
     /* 선택 O 텍스트 */
@@ -84,12 +67,12 @@ const CheckBox = styled.input`
       z-index: 1;
       position: absolute;
       padding: 0 0 0 6em;
-      content: '${(props) => props.right ?? '상세'}';
+      content: '상세';
       align-items: center;
       justify-content: center;
       font-weight: var(--bold-900);
       font-size: var(--small);
-      color: ${(props) => props.rightColor ?? 'var(--grey)'};
+      color: var(--grey);
     }
     /* 선택 O 원 */
     ::after {
