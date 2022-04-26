@@ -20,7 +20,7 @@ export default function Toggle2(){
 }
 
 const ToggleWrapper = styled.div`
-    margin: 0 30% 40px 30%;
+    margin: 0 30% 40px 32%;
     padding: 10px;
     background: var(--grey-background);
     border-radius: 2em;
@@ -29,6 +29,7 @@ const ToggleWrapper = styled.div`
     position: relative;
 `
 const LeftSide = styled.div`
+    cursor: pointer;
     position: absolute;
     font-weight: var(--bold-900);
     font-size: var(--small);
@@ -38,6 +39,7 @@ const LeftSide = styled.div`
 
 `
 const RigthSide = styled.div`
+    cursor: pointer;
     position: absolute;
     font-weight: var(--bold-900);
     font-size: var(--small);
@@ -60,8 +62,5 @@ const CheckBox = styled.input`
         background: var(--white);
         left: 79px;
         transition: all 0.2s ease-in-out;
-    }
-    ::after{
-        z-index: 1;
     }
 `
