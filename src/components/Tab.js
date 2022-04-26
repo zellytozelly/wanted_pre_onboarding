@@ -32,6 +32,7 @@ export default function Tab(){
           {tabContArr.map((section, index)=>{
             return(
               <TabItem
+                key={index}
                 isActive={index === activeIndex} 
                 onClick={()=>tabClickHandler(index)}
               >

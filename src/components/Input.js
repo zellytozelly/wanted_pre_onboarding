@@ -56,7 +56,7 @@ export default function Input(){
 }
 
 const LoginWrapper = styled.div`
-    margin: 0 20% 40px 15%;
+    margin: 0 30% 40px 25%;
     padding: 20px;
 `
 const Label = styled.div`
