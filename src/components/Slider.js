@@ -24,18 +24,18 @@ export default function Slider(){
                         step='1'
                     />
                 
-                    {splitValues.map((index)=>{
+                    {splitValues.map((posValue, index)=>{
                         return(
                             <>
                                 <Circle
-                                    index={index}
-                                    value={sliderValue} 
+                                    position={posValue}
+                                    currentValue={sliderValue} 
                                     
                                 />
                                 <RangeButton
-                                    index={index}
-                                    onClick={(e) => setSliderValue(index)}
-                                >{index}%</RangeButton>
+                                    position={posValue}
+                                    onClick={(e) => setSliderValue(posValue)}
+                                >{posValue}%</RangeButton>
                             </>
                         )
                     })}
@@ -99,17 +99,17 @@ const Input = styled.input`
 const Circle = styled.div`
     line-height: 3px;
     position: absolute;
-    left: calc(${(props)=>(props.index)}%);
+    left: calc(${(props)=>(props.position)}%);
     top: 50%;
     width: 15px;
     height: 15px;
     border-radius: 50%;
     transform: translate(-50%,-50%);
-    background: ${(props)=>((props.index > props.value) ? "var(--grey-background)" : "var(--green-mint)")};
+    background: ${(props)=>((props.position > props.currentValue) ? "var(--grey-background)" : "var(--green-mint)")};
 `
 const RangeButton = styled.button`
     position: absolute;
-    left: calc(${(props)=>(props.index)}% - 1.2rem);
+    left: calc(${(props)=>(props.position)}% - 1.2rem);
     margin: 30px 0;
     padding: 3px 0;
     background: var(--grey-background);
