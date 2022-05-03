@@ -11,7 +11,7 @@ export default function Input(){
     const [isEmail, setIsEmail] = useState(false);
     const [isEmpty, setIsEmpty] = useState(true);
     const checkEmail = (e) => {
-        var emailRegExp = /^[\w-]+(\.[\w-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$/;
+        var emailRegExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if (emailRegExp.test(e.target.value)) setIsEmail(true); else setIsEmail(false);
         if (!e.target.value) setIsEmpty(true); else setIsEmpty(false);
     }
@@ -38,7 +38,7 @@ export default function Input(){
                 <InputText 
                     type={isRevealPwd ? 'text' : 'password'} 
                     value={pwd} 
-                    onChange={(e) => setPwd(e.target.value)} 
+                    onChange={(e) => setPwd(e.currentTarget.value)} 
                     id='password' 
                     label='Password' 
                     placeholder='Password'/>    
